@@ -232,6 +232,24 @@ section {
   margin-top: 0px;
   position: relative;
 }
+.contenido {
+  padding: 0px 20%;
+  height: auto;
+}
+.frame {
+  width: 100%;
+  height: 600px;
+}
+.codigo {
+  color: black;
+  background: #f2f5ff;
+  white-space: normal;
+  padding: 9px 16px;
+  border-radius: 3px;
+  font-family: Consolas,Menlo,"Courier New", Courier, monospace;
+  overflow: auto;
+}
+
 em {
   font-size: 2.5em;
   font-family: AQuietSleep;
@@ -331,182 +349,6 @@ div a{
     top: 350px;
     height: 300px;
 }
-/*.container {
-  width: 200px;
-  height: 150px;
-  text-align: center;
-  transition: 0.6s;
--webkit-transition: 0.6s;
--moz-transition: 0.6s;
--o-transition: 0.6s;
-  box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
--webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
-  -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
-  -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
-}*/
-/*.flotante img {
-  width: 40%;
-  height: auto;
-  margin: auto;
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: center;
-  transition: 0.6s;
--webkit-transition: 0.6s;
--moz-transition: 0.6s;
--o-transition: 0.6s;
-  image-rendering: optimizeQuality;
-  position: relative;
-}*/
-/*.cuadricula {
-  height: 400px;
-  padding-bottom: 0px;
-  overflow-x: scroll;
-  display: grid;
-  grid-gap: 5px;
-  grid-template-columns: repeat(10, minmax(400px, 1fr));
-  grid-template-rows: 1fr;
-  transition: 0.6s;
--webkit-transition: 0.6s;
--moz-transition: 0.6s;
--o-transition: 0.6s;
- }
-
-.ref {
-  overflow-x: hidden;
-  position: relative;
-  padding: 0px 20px 20px 0px;
-  border-radius: 16px;
-  background-color: rgb(200, 200, 200);
-  align-content: center;
-  transition: 0.6s;
-  border: 1px solid rgb(180, 180, 180);
-   box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
-  -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
-  -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
-  -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;   
-  transition: 0.6s;
--webkit-transition: 0.6s;
--moz-transition: 0.6s;
--o-transition: 0.6s;
-} 
-.ref .box {
-  position: sticky;
-  top: 0px;
-}*/
-
-}
-/*.esquema {
-  transition: 0.9s;
-}
-.esquema:hover {
-  width: 70%;
-  height: auto;
-  box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
- -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
--moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
--o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
-
-}*/
-
-  /*[data-title]:hover:after {
-  visibility: visible;
-  transition: 0.8s;
-  } 
-  [data-title]:after {
-  content:  attr(data-title);
-  background-color: rgba(7, 177, 251, 0.9);
-  font-family: Rockwell;
-  font-size: 10px;
-  color: rgb(240, 240, 240);
-  text-shadow: black 0.0em 0.0em 0.2em;
-  position: absolute;
-  padding: 3px 20px;
-  border-radius: 4px;
-  visibility: hidden;
-  border: 1px;
-  opacity: 0;
-  white-space: nowrap;
-  pointer-events: ;
-  }*/
-
-
-/*  section {
-    overflow: hidden;
-    margin: 0px;
-    width: 100%;
-  }
-
-  h2.box {
-    top: 100px;
-  }
-  .ref {
-    height: 65vh;
-  }
-  .redes1 img {
-    width: 45px;
-    height: 45px;
-  }
-  .imagenes {
-  display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 5px;
-    margin: 50px 15% 20px 20%;
-}
-  .container {
-    width: 90px;
-    height: 75px;
-  }
-.secundary img {
-  padding-right: 10%;
-  padding-top: 100%;
-  float: right;
-  width: 110%;
-  height: auto;
-}
-hr {
-  width: 10em;
-}
-.foot {
-  padding-right: 30px;
-}
-.logofoot {
-  width: 40%;
-}
-}*/
-
-/*.buscar {
-  width: 110px;
-  font-family: Arial, serif;
-  font-size: 15px;
-  size: 15px;
-  color: rgb(22, 41, 85);
-  background: rgba(63, 134, 184, 0.3);
-  border-style: solid;
-  border-color: black;
-  float: right;
-  margin-right: 20px;
-  margin-top: 05px;
-  margin-bottom: 20px;
-  display: inline-block;
-}
-.lupita {
-    background: rgba(63, 134, 184, 0.3);
-    border-style: solid;
-    border-color: black;
-  size: 15px;
-  float: right;
-  margin-left: 20px;
-  margin-top: 05px;
-  margin-bottom: 20px;
-}
-.lupita:hover {
-    background: rgba(63, 134, 184, 1);
-  size: 15px;
-
-}*/
-
-
 @charset "UTF-8";
 /*!
  * animate.css - https://animate.style/
