@@ -246,6 +246,7 @@ section {
   white-space: normal;
   padding: 9px 16px;
   border-radius: 3px;
+  font-size: 20px;
   font-family: Consolas,Menlo,"Courier New", Courier, monospace;
   overflow: auto;
 }
@@ -257,11 +258,11 @@ em {
 section p {
   text-align: left;
   color: rgb(180, 180, 180);
-  font-size: 20px;
+  font-size: 25px;
   font-family: AYearWithoutRain, serif;
   padding: 30px;
   text-align: justify;
-  line-height: 1.5em;
+  line-height: 0.9em;
 }
 .pie-pagina {
   background: linear-gradient(45deg, rgb(0, 201, 186),rgb(53, 0, 55)50%, rgb(136, 70, 138),rgb(146, 192, 96) 95%, rgb(42, 59, 24));
@@ -313,6 +314,9 @@ a.flechita img {
 }
 div a{
   text-decoration: none;
+}
+div a:hover {
+  color: white;
 }
 @media only screen and (max-width: 800px) {
   header {

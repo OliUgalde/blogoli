@@ -40,10 +40,86 @@
 
 <section>
   <p><em>React Permission Denied</em></p><br>
-  <p>Intentas crear una app con react con el código:</p>
-  <p class="codigo">npx create-react-app</p>
-  
-  
+   <p>Intentas crear una app con react con el código:</p>
+   <p class="codigo">npx create-react-app</p>
+   <p>Y a pesar de estar en la consola como superusuario, te arroja el error de:</p>
+   <p class="codigo">permission denied</p>
+   <p>Puedes ver mi video en youtube que te dejo en seguida explicando paso a paso la solución de este problema y/o leer este blog donde te explico todo...</p>
+   
+   <!--video de youtube-->
+
+   <p>No desesperes, la solución es mas simple de lo que imaginas.<br><br>
+    Cuando tienes un solo usuario, la cuenta de administrador, ubuntu te arroja ese error como una medida de seguridad, por lo que es necesario crear un nuevo usuario que también pueda logearse como superusuario. <br><br>
+    Para ello, vamos a crear un nuevo usuario y vamos a escribir los siguientes comandos:</p>
+   <p class="codigo">sudo su<br>
+  adduser (nombre del nuevo usuario, sin parentesis*)</p>
+   <p>Desde luego te va a pedir que establezcas una contraseña, anotala para no olvidarla :P<br><br>
+    Por último vamos a darles los atributos de administrador al nuevo usuario</p>
+   <p class="codigo">adduser (nombre del usuario) sudo</p>
+   <p>Muy bien!!! ahora el nuevo usuario también tiene atributos de super usuario. <br><br>
+    Para pasar de un usuario a otro en la consola ahora solo vamos a escribir:</p>
+   <p class="codigo">su (nombredeusuario)</p>
+   <p>Ahora ya podemos seguir con la instalación de NodeJS...</p>
+  <p><em>Instalar NodeJS</em></p>
+   <p>Ya que creamos al nuevo usuario, podemos continuar con la correcta instalación de NodeJS<br><br>
+    En este blog vamos a instalar NodeJS por medio de NVM (Node Version Manager) para lo que vamos a escribir en la consola: (no olvides que debes estar logeado como super usuario con sudo su)</p>
+  <p class="codigo">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash</p>
+  <p>Ya que lo instalamos, vamos a verificar la version de NVM:</p>
+  <p class="codigo">nvm -v</p>
+  <p>Para ver las versiones de node que ahora tenemos disponibles, corremos el siguiente comando:</p>
+  <p class="codigo">nvm ls-remote</p>
+  <p>Procedemos a instalar NodeJS (por fin XD)</p>
+  <p class="codigo">nvm install node</p>
+  <p>Pero si requerimos instalar una versión en específico, podemos despues escribir lo siguiente:</p>
+  <p class="codigo">nvm install 14.3 (la versión que queramos)</p>
+  <p>Para ver las versiones que tenemos instaladas en el sistema:</p>
+  <p class="codigo">nvm ls</p>
+  <p>Para usar cualquiera de esas versiones:</p>
+  <p class="codigo">nvm use 14.3 (la versión que necesites)</p>
+  <p>Casi lo olvidaba... vamos a instalar NPM, que es npm es el sistema de gestión de paquetes por defecto para Node.js, un entorno de ejecución para JavaScript:</p>
+  <p class="codigo">sudo apt install npm -y</p>
+  <p>Para ver la versión de NPM instalada:</p>
+  <p class="codigo">nvm --version</p>
+  <p><em>Instalar Express.js</em></p>
+  <p>Express es una aplicación framework de Node.js minimalista y flexible que provee de un conjunto robusto de características  para sitios web y aplicaciones móviles, creeme, la vas a necesitar...<br><br>
+  Por lo que vamos a instalarla con el siguiente comando:</p>
+  <p class="codigo">npm install -g express</p>
+  <p><em>Crear Proyecto React</em></p>
+  <p>Despues de toda esta espera, crearemos por fin nuestro proyecto en React (recuerda hacerlo como super usuario)<br><br>
+  Puedes ir a la pagina oficial de React y seguir el tutorial que ahi ofrecen en la siguiente liga:</p>
+  <p class="codigo">https://es.reactjs.org/tutorial/tutorial.html</p>
+  <p>Pero ya que estas aqui... te lo voy a explicar...</p>
+  <p>Lo primero que vamos a hacer es crear la carpeta donde vamos a alojar nuestra app React, por medio del siguiente codigo:</p>
+  <p class="codigo">mkdir (el nombre que tu quieras, sin el paréntesis*) <br>
+  cd (nombre de tu carpeta)</p>
+  <p>Vamos a crear el paquete .json para tener node.js</p>
+  <p class="codigo">npm init -y <br>
+  npm install express</p>
+  <p>Una vez hecho esto, vamos a ingresar la siguiente linea de código para crear la carpeta de my-app (le puedes poner como tu quieras) dentro de la carpeta que tu designaste:</p> 
+  <p class="codigo">npx create-react-app my-app</p> 
+  <p>Despues de esto, la consola nos va a decir que se ha creado una nueva carpeta llamada my-app (o como le hayas puesto)<br>
+  Por lo que vamos a meternos a dicha carpeta y eliminar los archivos de la carpeta src con los siguientes comandos:</p>  
+  <p class="codigo">cd my-app<br>
+  cd src<br>
+  rm -f *</p>
+  <p>Vamos quedarnos en la carpeta src y vamos a crear dos archivos llamados index.css e index.js respectivamente</p>
+  <p class="codigo">touch index.css<br>
+  touch index.js</p>
+  <p>Ahora tenemos que copiar el código de nuestra app dentro de dichos archivos, pero en este caso, vamos a terminar con el tutorial de la pagina oficial de React y su ejercicio de tic tac toe:<br><br>
+  Puedes abrir los archivos con tu editor de código preferido o puedes hacerlo directo en la consola con los siquientes comandos:</p>
+  <p class="codigo">sudo nano index.css</p>
+  <p>Copia el código del siguiente <a href="https://codepen.io/gaearon/pen/oWWQNa?editors=0100">enlace</a></p>
+  <p class="codigo">sudo nano index.js</p>
+  <p>Copia el código del siguiente <a href="https://codepen.io/gaearon/pen/oWWQNa?editors=0010">enlace</a><br>
+  Sin cerrar el archivo JS, vamos a poner el siguiente codigo por encima del que copiamos en el enlace anterior:</p>
+  <p class="codigo">import React from 'react';<br>
+    import ReactDOM from 'react-dom/client';<br>
+    import './index.css';</p>
+  <p>Ya que todo está correcto ahora si podemos iniciar npm y nos va a indicar que podemos ir a una url en el navegador para ver nuestra app con el juego tic tac toe con el siguiente comando:</p>
+  <p class="codigo">npm start</p>
+  <p>Pffff fue mucho trabajo pero no fue tan dificil, verdad? :) espero me apoyes con un like en youtube y que te suscribas, estaré subiendo más tutoriales como estos y cualquier comentario será más que bienvenido, espero haberte podido ayudar, hasta la proxima :)</p>
+
+
   <a class="flechita" href="#arriba"><img src="flechita.png"></a><br><br>
 </section>
 
