@@ -47,16 +47,16 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item indice">
-            <a class="nav-link active" aria-current="page" href=".html">Código</a>
+            <a class="nav-link" aria-current="page" href="codigo.html">Código</a>
           </li>
           <li class="nav-item indice">
-            <a class="nav-link" href=".html">Recomendaciones</a>
+            <a class="nav-link" href="libros.html">Libros y Fuentes</a>
           </li>
           <li class="nav-item indice">
-            <a class="nav-link" href="filtros.html">Ocio</a>
+            <a class="nav-link" href="recomendaciones.html">Recomendaciones</a>
           </li>
           <li class="nav-item indice">
-            <a class="nav-link" href="servicios.html">Libros</a>
+            <a class="nav-link" href="ocio.html">Ocio</a>
           </li>
         </ul>
       </div>
@@ -69,36 +69,37 @@
   </div>
   <div class="colorborde">
     <div class="misredes"> 
-      <h5>Mis redes</h5> 
+      <h5>Redes y donaciones</h5> 
       <div class="redes">
         <a class="redes1" href="https://www.facebook.com/olivia.ugalde.75/"> <img class="animate__animated animate__swing animate__delay-1s animate__infinite animate__slower" src="facebook.png"></a>
         <a class="redes1" href="https://wa.me/qr/D7OYSM4SXFL3P1" target="_blank"><img class="animate__animated animate__swing animate__delay-2s animate__infinite animate__slower" src="whats.png"></a>
         <a class="redes1" href="mailto:oliugalde@codigodemujeres.xyz" target="_blank"><img class="animate__animated animate__swing animate__delay-3s animate__infinite animate__slower" src="gmail.png" data-title="olyugarcia@gmail.com"></a>
         <a class="redes1" href="https://www.instagram.com/oliugaldeg/?hl=es-la" target="_blank"><img class="animate__animated animate__swing animate__delay-1s animate__infinite animate__slower" src="instagram.png"></a>
-        <a class="redes1" href="https://www.tiktok.com/@oliugalde?lang=es" target="_blank"><img class="animate__animated animate__swing animate__delay-2s animate__infinite animate__slower" src="tiktok.png"></a>
         <a class="redes1" href="https://www.linkedin.com/in/olivia-ugalde-bb212564/" target="_blank"><img class="animate__animated animate__swing animate__delay-3s animate__infinite animate__slower" src="linkedin.png"></a>
+        <a class="redes1" href="https://paypal.me/oliviaugaldegarcia?country.x=MX&locale.x=es_XC" target="_blank"><img class="animate__animated animate__swing animate__delay-3s animate__infinite animate__slower" src="paypal.png"></a>
       </div>
     </div>
   </div>
   <div class="carrusel">
     <div class="inbox">
       <div class="card" id="tarj">
-        <a title="See More" href="reactpermissiondenied.html" target="codigocontent">
+        <a href="#reactpermissiondenied">
           <h3 class="box">React Permission denied error</h3>
-          <p>Si usas Ubuntu 20.04 y te sale este error al querer crear tu carpeta en react, esto es para ti</p></a>
-      </div>
+          <p>Si usas Ubuntu 20.04 y te sale este error al querer crear tu carpeta en react, esto es para ti</p>
+        </a>
+        </div>
       <div class="card" id="tarj">
-        <a title="See More" href="reactpermissiondenied.html" target="codigocontent">
+        <a href="#instalanode" target="codigocontent">
           <h3 class="box">Instala Node JS</h3>
           <p>Ya que solucionamos el error de permission denied, vamos a instalar NodeJS desde la consola, por medio de NVM (Node Version Manager)</p></a>
       </div>
       <div class="card" id="tarj">
-        <a title="See More" href="reactpermissiondenied.html" target="codigocontent">
+        <a href="#instalaexpress" target="codigocontent">
           <h3 class="box">Instala Express.js</h3>
           <p>Express es una aplicación framework de Node.js que provee de un conjunto de características  para sitios web y aplicaciones móviles</p></a>
       </div>
       <div class="card" id="tarj">
-        <a title="See More" href="reactpermissiondenied.html" target="codigocontent">
+        <a href="crearproyectoreact" target="codigocontent">
           <h3 class="box">Crear proyecto React</h3>
           <p>Desde la creación de la carpeta donde alojarás tu app hasta su creación</p></a>
       </div>
@@ -107,18 +108,101 @@
 </header>
 
 <section class="contenido">
-  <div class="encabezado">
-  <p><em>Con cariño para tod@s</em></p><br>
-  <p>Este blog lo he elaborado para subir todo tipo de contenido que pudiera ser de interes para todo aquel que se dedique a codificar y/o programar</p>
-  </div>
-  <div>
-    <iframe class="frame" src="reactpermissiondenied.html" name="codigocontent">
+  <div class="bloque">
+  <a name="reactpermissiondenied"><p><em>React Permission Denied</em></p><br></a>
+   <p>Intentas crear una app con react con el código:</p>
+   <p class="codigo">npx create-react-app</p>
+   <p>Y a pesar de estar en la consola como superusuario, te arroja el error de:</p>
+   <p class="codigo">permission denied</p>
+   <p>Puedes ver mi video en youtube que te dejo en seguida explicando paso a paso la solución de este problema y/o leer este blog donde te explico todo...</p>
+   
+   <!--video de youtube-->
 
-    </iframe>
+   <p>No desesperes, la solución es mas simple de lo que imaginas.<br><br>
+    Cuando tienes un solo usuario, la cuenta de administrador, ubuntu te arroja ese error como una medida de seguridad, por lo que es necesario crear un nuevo usuario que también pueda logearse como superusuario. <br><br>
+    Para ello, vamos a crear un nuevo usuario y vamos a escribir los siguientes comandos:</p>
+   <p class="codigo">sudo su<br>
+  adduser (nombre del nuevo usuario, sin parentesis*)</p>
+   <p>Desde luego te va a pedir que establezcas una contraseña, anotala para no olvidarla :P<br><br>
+    Por último vamos a darles los atributos de administrador al nuevo usuario</p>
+   <p class="codigo">adduser (nombre del usuario) sudo</p>
+   <p>Muy bien!!! ahora el nuevo usuario también tiene atributos de super usuario. <br><br>
+    Para pasar de un usuario a otro en la consola ahora solo vamos a escribir:</p>
+   <p class="codigo">su (nombredeusuario)</p>
+   <p>Ahora ya podemos seguir con la instalación de NodeJS...</p>
+   <a name="instalanode"><p><em>Instalar NodeJS</em></p></a>
+   <p>Ya que creamos al nuevo usuario, podemos continuar con la correcta instalación de NodeJS<br><br>
+    En este blog vamos a instalar NodeJS por medio de NVM (Node Version Manager) para lo que vamos a escribir en la consola: (no olvides que debes estar logeado como super usuario con sudo su)</p>
+  <p class="codigo">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash</p>
+  <p>Ya que lo instalamos, vamos a verificar la version de NVM:</p>
+  <p class="codigo">nvm -v</p>
+  <p>Para ver las versiones de node que ahora tenemos disponibles, corremos el siguiente comando:</p>
+  <p class="codigo">nvm ls-remote</p>
+  <p>Procedemos a instalar NodeJS (por fin XD)</p>
+  <p class="codigo">nvm install node</p>
+  <p>Pero si requerimos instalar una versión en específico, podemos despues escribir lo siguiente:</p>
+  <p class="codigo">nvm install 14.3 (la versión que queramos)</p>
+  <p>Para ver las versiones que tenemos instaladas en el sistema:</p>
+  <p class="codigo">nvm ls</p>
+  <p>Para usar cualquiera de esas versiones:</p>
+  <p class="codigo">nvm use 14.3 (la versión que necesites)</p>
+  <p>Casi lo olvidaba... vamos a instalar NPM, que es npm es el sistema de gestión de paquetes por defecto para Node.js, un entorno de ejecución para JavaScript:</p>
+  <p class="codigo">sudo apt install npm -y</p>
+  <p>Para ver la versión de NPM instalada:</p>
+  <p class="codigo">nvm --version</p>
+  <a name="instalaexpress"></a><p><em>Instalar Express.js</em></p></a>
+  <p>Express es una aplicación framework de Node.js que provee de un conjunto de características  para sitios web y aplicaciones móviles<br><br>
+  Por lo que vamos a instalarla con el siguiente comando:</p>
+  <p class="codigo">npm install -g express</p>
+  <a name="crearproyectoreact"></a><p><em>Crear Proyecto React</em></p></a>
+  <p>Despues de toda esta espera, crearemos por fin nuestro proyecto en React (recuerda hacerlo como super usuario)<br><br>
+  Puedes ir a la pagina oficial de React y seguir el tutorial que ahi ofrecen en la siguiente liga:</p>
+  <p class="codigo">https://es.reactjs.org/tutorial/tutorial.html</p>
+  <p>Pero ya que estas aqui... te lo voy a explicar...</p>
+  <p>Lo primero que vamos a hacer es crear la carpeta donde vamos a alojar nuestra app React, por medio del siguiente codigo:</p>
+  <p class="codigo">mkdir (el nombre que tu quieras, sin el paréntesis*) <br>
+  cd (nombre de tu carpeta)</p>
+  <p>Vamos a crear el paquete .json para tener node.js</p>
+  <p class="codigo">npm init -y <br>
+  npm install express</p>
+  <p>Una vez hecho esto, vamos a ingresar la siguiente linea de código para crear la carpeta de my-app (le puedes poner como tu quieras) dentro de la carpeta que tu designaste:</p> 
+  <p class="codigo">npx create-react-app my-app</p> 
+  <p>Despues de esto, la consola nos va a decir que se ha creado una nueva carpeta llamada my-app (o como le hayas puesto)<br>
+  Por lo que vamos a meternos a dicha carpeta y eliminar los archivos de la carpeta src con los siguientes comandos:</p>  
+  <p class="codigo">cd my-app<br>
+  cd src<br>
+  rm -f *</p>
+  <p>Vamos quedarnos en la carpeta src y vamos a crear dos archivos llamados index.css e index.js respectivamente</p>
+  <p class="codigo">touch index.css<br>
+  touch index.js</p>
+  <p>Ahora tenemos que copiar el código de nuestra app dentro de dichos archivos, pero en este caso, vamos a terminar con el tutorial de la pagina oficial de React y su ejercicio de tic tac toe:<br><br>
+  Puedes abrir los archivos con tu editor de código preferido o puedes hacerlo directo en la consola con los siquientes comandos:</p>
+  <p class="codigo">sudo nano index.css</p>
+  <p>Copia el código del siguiente <a href="https://codepen.io/gaearon/pen/oWWQNa?editors=0100">enlace</a></p>
+  <p class="codigo">sudo nano index.js</p>
+  <p>Copia el código del siguiente <a href="https://codepen.io/gaearon/pen/oWWQNa?editors=0010">enlace</a><br>
+  Sin cerrar el archivo JS, vamos a poner el siguiente codigo por encima del que copiamos en el enlace anterior:</p>
+  <p class="codigo">import React from 'react';<br>
+    import ReactDOM from 'react-dom/client';<br>
+    import './index.css';</p>
+  <p>Ya que todo está correcto ahora si podemos iniciar npm y nos va a indicar que podemos ir a una url en el navegador para ver nuestra app con el juego tic tac toe con el siguiente comando:</p>
+  <p class="codigo">npm start</p>
+  <p>Pffff fue mucho trabajo pero no fue tan dificil, verdad? :) espero me apoyes con un like en youtube y que te suscribas, estaré subiendo más tutoriales como estos y cualquier comentario será más que bienvenido, espero haberte podido ayudar, hasta la proxima :)</p>
   </div>
-  
-  
+<!--publicidad google-->
+  <div class="publicidad">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4936760982383172"
+    crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+    style="display:inline-block;width:360px;height:800px"
+    data-ad-client="ca-pub-4936760982383172"
+    data-ad-slot="2161971124"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
   <a class="flechita" href="#arriba"><img src="flechita.png"></a><br><br>
+  </div>
 </section>
 
 <footer class="foot pie-pagina">
@@ -138,7 +222,9 @@
     <p></p>
     <p></p><hr>
   </div>
-</footer>
+ </footer>
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4936760982383172"
+ crossorigin="anonymous"></script>
 <script src="script.js"></script>
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
