@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="blog de código para programadores y mas...">
   <meta name="author" content="Olivia Ugalde García">
-  <meta name="keywords" content="programacion, programar, codigo, codificar, blog, pasatiempos, hobbies, desarrollo web, errores comunes, soluciones">
+  <meta name="keywords" content="error, terminal, ubuntu, codigo, permission denied, react, javaScript, errores comunes, solucion, soluciones">
   <meta name="copyright" content="none">
   <meta name="robots" content="index">
   <meta name="robots" content="follow">
@@ -47,7 +47,7 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item indice">
-            <a class="nav-link" aria-current="page" href="codigo.html">Código</a>
+            <a class="nav-link active" aria-current="page" href="codigo.html">Código</a>
           </li>
           <li class="nav-item indice">
             <a class="nav-link" href="libros.html">Libros y Fuentes</a>
@@ -71,7 +71,7 @@
     <div class="misredes"> 
       <h5>Redes y donaciones</h5> 
       <div class="redes">
-        <a class="redes1" href="https://www.facebook.com/olivia.ugalde.75/"> <img class="animate__animated animate__swing animate__delay-1s animate__infinite animate__slower" src="facebook.png"></a>
+        <a class="redes1" href="https://www.facebook.com/olivia.ugalde.75/" target="_blank"> <img class="animate__animated animate__swing animate__delay-1s animate__infinite animate__slower" src="facebook.png"></a>
         <a class="redes1" href="https://wa.me/qr/D7OYSM4SXFL3P1" target="_blank"><img class="animate__animated animate__swing animate__delay-2s animate__infinite animate__slower" src="whats.png"></a>
         <a class="redes1" href="mailto:oliugalde@codigodemujeres.xyz" target="_blank"><img class="animate__animated animate__swing animate__delay-3s animate__infinite animate__slower" src="gmail.png" data-title="olyugarcia@gmail.com"></a>
         <a class="redes1" href="https://www.instagram.com/oliugaldeg/?hl=es-la" target="_blank"><img class="animate__animated animate__swing animate__delay-1s animate__infinite animate__slower" src="instagram.png"></a>
@@ -89,17 +89,17 @@
         </a>
         </div>
       <div class="card" id="tarj">
-        <a href="#instalanode" target="codigocontent">
+        <a href="#instalanode">
           <h3 class="box">Instala Node JS</h3>
           <p>Ya que solucionamos el error de permission denied, vamos a instalar NodeJS desde la consola, por medio de NVM (Node Version Manager)</p></a>
       </div>
       <div class="card" id="tarj">
-        <a href="#instalaexpress" target="codigocontent">
+        <a href="#instalaexpress">
           <h3 class="box">Instala Express.js</h3>
           <p>Express es una aplicación framework de Node.js que provee de un conjunto de características  para sitios web y aplicaciones móviles</p></a>
       </div>
       <div class="card" id="tarj">
-        <a href="crearproyectoreact" target="codigocontent">
+        <a href="#crearproyectoreact">
           <h3 class="box">Crear proyecto React</h3>
           <p>Desde la creación de la carpeta donde alojarás tu app hasta su creación</p></a>
       </div>
@@ -109,16 +109,17 @@
 
 <section class="contenido">
   <div class="bloque">
-  <a name="reactpermissiondenied"><p><em>React Permission Denied</em></p><br></a>
+  <a name="reactpermissiondenied"></a>
+  <p><em>React Permission Denied</em></p><br>
    <p>Intentas crear una app con react con el código:</p>
    <p class="codigo">npx create-react-app</p>
    <p>Y a pesar de estar en la consola como superusuario, te arroja el error de:</p>
-   <p class="codigo">permission denied</p>
+   <img class="captura" src="permission.png">
    <p>Puedes ver mi video en youtube que te dejo en seguida explicando paso a paso la solución de este problema y/o leer este blog donde te explico todo...</p>
    
    <!--video de youtube-->
 
-   <p>No desesperes, la solución es mas simple de lo que imaginas.<br><br>
+   <p>No desesperes, la solución es mas simple de lo que imaginas... aunque un poco laboriosa, pero empecemos.<br><br>
     Cuando tienes un solo usuario, la cuenta de administrador, ubuntu te arroja ese error como una medida de seguridad, por lo que es necesario crear un nuevo usuario que también pueda logearse como superusuario. <br><br>
     Para ello, vamos a crear un nuevo usuario y vamos a escribir los siguientes comandos:</p>
    <p class="codigo">sudo su<br>
@@ -130,7 +131,9 @@
     Para pasar de un usuario a otro en la consola ahora solo vamos a escribir:</p>
    <p class="codigo">su (nombredeusuario)</p>
    <p>Ahora ya podemos seguir con la instalación de NodeJS...</p>
-   <a name="instalanode"><p><em>Instalar NodeJS</em></p></a>
+   <a name="instalanode"></a>
+    <br><br><br>
+    <p><em>Instalar NodeJS</em></p>
    <p>Ya que creamos al nuevo usuario, podemos continuar con la correcta instalación de NodeJS<br><br>
     En este blog vamos a instalar NodeJS por medio de NVM (Node Version Manager) para lo que vamos a escribir en la consola: (no olvides que debes estar logeado como super usuario con sudo su)</p>
   <p class="codigo">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash</p>
@@ -150,11 +153,15 @@
   <p class="codigo">sudo apt install npm -y</p>
   <p>Para ver la versión de NPM instalada:</p>
   <p class="codigo">nvm --version</p>
-  <a name="instalaexpress"></a><p><em>Instalar Express.js</em></p></a>
+  <a name="instalaexpress"></a>
+  <br><br><br>
+  <p><em>Instalar Express.js</em></p>
   <p>Express es una aplicación framework de Node.js que provee de un conjunto de características  para sitios web y aplicaciones móviles<br><br>
   Por lo que vamos a instalarla con el siguiente comando:</p>
   <p class="codigo">npm install -g express</p>
-  <a name="crearproyectoreact"></a><p><em>Crear Proyecto React</em></p></a>
+  <a name="crearproyectoreact"></a>
+  <br><br><br>
+  <p><em>Crear Proyecto React</em></p></a>
   <p>Despues de toda esta espera, crearemos por fin nuestro proyecto en React (recuerda hacerlo como super usuario)<br><br>
   Puedes ir a la pagina oficial de React y seguir el tutorial que ahi ofrecen en la siguiente liga:</p>
   <p class="codigo">https://es.reactjs.org/tutorial/tutorial.html</p>

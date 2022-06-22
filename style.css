@@ -313,6 +313,12 @@ div a{
 div a:hover {
   color: white;
 }
+img.captura {
+  width: 90%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
 @media only screen and (max-width: 800px) {
   header {
     height: 600px;
