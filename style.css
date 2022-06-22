@@ -313,6 +313,10 @@ div a{
 div a:hover {
   color: white;
 }
+.videoyoutube {
+  display:flex;
+  justify-content: center;
+}
 img.captura {
   width: 90%;
   height: auto;
