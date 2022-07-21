@@ -32,6 +32,12 @@
   font-style: normal;
   font-weight: normal;
 }
+@font-face {
+  font-family: "IndieFlower";
+  src: url("IndieFlower.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
 hr {
   color: rgb(180, 180, 180);
   width: 10em;
@@ -249,14 +255,15 @@ section {
 }
 em {
   font-size: 2.5em;
-  font-family: AQuietSleep;
+  font-family: IndieFlower;
+  line-height: 1em;
 }
 section p {
   text-align: justify;
   color: rgb(180, 180, 180);
   font-size: 25px;
   font-family: AYearWithoutRain, serif;
-  padding: 30px;
+  padding: 20px;
   line-height: 1em;
 }
 .pie-pagina {
@@ -323,6 +330,25 @@ img.captura {
   display: block;
   margin: auto;
 }
+.vinculo {
+    position: relative;
+    padding-bottom: 100%;
+    height: 0;
+
+  }
+.vinculo iframe, .inframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.inframe {
+    position: relative;
+    padding-bottom: 40%;
+    height: 0;
+  }
+
 @media only screen and (max-width: 800px) {
   header {
     height: 600px;
@@ -368,7 +394,6 @@ img.captura {
     grid-template-columns: none;
     grid-template-rows: auto auto
   }
-
 
 @charset "UTF-8";
 /*!

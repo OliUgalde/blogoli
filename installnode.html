@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--google-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4936760982383172"
+     crossorigin="anonymous"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="blog de código para programadores y mas...">
+  <meta name="author" content="Olivia Ugalde García">
+  <meta name="keywords" content="programacion, programar, codigo, codificar, distribucion linux, linux, desarrollo web, sistema operativo, el mejor sistema, ubuntu">
+  <meta name="copyright" content="none">
+  <meta name="robots" content="index">
+  <meta name="robots" content="follow">
+	<link rel="stylesheet" type="text/css" href="style.css"> 
+  <title>CódigoDeMujeres|Inicio</title>
+</head>
+<body>	
+<a name="arriba"></a>
+
+<section>
+  
+  <p><em>Instalar NodeJS</em></p>
+   <p>Ya que creamos al nuevo usuario, podemos continuar con la correcta instalación de NodeJS<br><br>
+    En este blog vamos a instalar NodeJS por medio de NVM (Node Version Manager) para lo que vamos a escribir en la consola: (no olvides que debes estar logeado como super usuario con sudo su)</p>
+  <p class="codigo">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash</p>
+  <p>Ya que lo instalamos, vamos a verificar la version de NVM:</p>
+  <p class="codigo">nvm -v</p>
+  <p>Para ver las versiones de node que ahora tenemos disponibles, corremos el siguiente comando:</p>
+  <p class="codigo">nvm ls-remote</p>
+  <p>Procedemos a instalar NodeJS (por fin XD)</p>
+  <p class="codigo">nvm install node</p>
+  <p>Pero si requerimos instalar una versión en específico, podemos despues escribir lo siguiente:</p>
+  <p class="codigo">nvm install 14.3 (la versión que queramos)</p>
+  <p>Para ver las versiones que tenemos instaladas en el sistema:</p>
+  <p class="codigo">nvm ls</p>
+  <p>Para usar cualquiera de esas versiones:</p>
+  <p class="codigo">nvm use 14.3 (la versión que necesites)</p>
+  <p>Casi lo olvidaba... vamos a instalar NPM, que es npm es el sistema de gestión de paquetes por defecto para Node.js, un entorno de ejecución para JavaScript:</p>
+  <p class="codigo">sudo apt install npm -y</p>
+  <p>Para ver la versión de NPM instalada:</p>
+  <p class="codigo">npm --version</p>
+
+<br><br>
+
+  <p><em>Instalar Express.js</em></p>
+  <p>Express es una aplicación framework de Node.js que provee de un conjunto de características  para sitios web y aplicaciones móviles<br><br>
+  Por lo que vamos a instalarla con el siguiente comando:</p>
+  <p class="codigo">npm install -g express</p>
+  <a name="crearproyectoreact"></a>
+
+
+  <a class="flechita" href="#arriba"><img src="flechita.png"></a><br><br>
+</section>
+
+</body>
+</html>
+
+
